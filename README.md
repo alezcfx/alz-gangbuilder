@@ -64,12 +64,11 @@ Le fichier `config.lua` permet de personnaliser :
 ## 📚 Documentation
 
 ### Commandes Admin
-- `/creategang` : Créer un nouveau gang
-- `/deletegang` : Supprimer un gang existant
-- `/setgang` : Définir le gang d'un joueur
+- `/removegangadmin` : Supprimer un admin
+- `/addgangadmin` : Ajouter un ID Admin pour ouvrir le menu
 
 ### Touches
-- `F7` : Ouvrir le menu gang
+- `F9` : Ouvrir le menu gang
 
 ## 🤝 Support
 
