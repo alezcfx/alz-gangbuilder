@@ -34,6 +34,23 @@ Config.Storage = {
     }
 }
 
+Config.BossMenu = {
+    UseOxTarget = false,
+    CheckInterval = 5000,
+    Marker = {
+        Type = 22,
+        Size = {x = 0.5, y = 0.5, z = 0.5},
+        Color = {r = 255, g = 0, b = 0, a = 100},
+        DrawDistance = 10.0,
+        Control = 38
+    },
+    OxTarget = {
+        Icon = "fa-solid fa-briefcase",
+        Label = "Menu Patron",
+        Distance = 2.0
+    }
+}
+
 Config.Search = {
     UseOxInventory = true,
     SearchCommand = 'search'
@@ -64,5 +81,20 @@ Config.ValidateStorageConfig = function()
         Config.Storage.DefaultSlots = 100
     end
 
+    return true
+end
+
+Config.ValidateBossMenuConfig = function()
+    if not Config.BossMenu then
+        print('[GangBuilder] [ERREUR] Configuration du menu patron manquante')
+        return false
+    end
+    
+    if Config.BossMenu.UseOxTarget then
+        print('[GangBuilder] [INFO] Menu patron configuré pour utiliser ox_target')
+    else
+        print('[GangBuilder] [INFO] Menu patron configuré pour utiliser des marqueurs')
+    end
+    
     return true
 end
