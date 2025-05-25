@@ -5,7 +5,7 @@ author 'BZRR - DEV discord.gg/VJEuqYkSWt'
 
 description 'Gang Builder'
 
-version '1.0.0'
+version '1.0.1'
 
 client_scripts {
 	"input/client.lua"
